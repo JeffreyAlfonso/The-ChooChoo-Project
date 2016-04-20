@@ -14,3 +14,63 @@ Track code
 Powered track is placed in straight sections while iron rail is used for turn sections
 Track is place according to the protype layout (see Project Page for details)
 -reverse codes were written to reposition the turtle
+
+---------------
+
+turtle.forward()
+turtle.up()
+ 
+for n = 1, 20 do
+turtle.select(1)
+turtle.placeDown()
+turtle.forward()
+ 
+end
+ 
+turtle.select(4)
+turtle.placeDown()
+turtle.turnRight()
+ 
+for n = 1, 15 do
+turtle.forward()
+turtle.select(1)
+turtle.placeDown()
+ 
+end
+ 
+turtle.turnLeft()
+turtle.forward()
+turtle.turnLeft()
+ 
+for n = 1, 6 do
+turtle.forward()
+end
+ 
+turtle.select(5)
+turtle.placeDown()
+ 
+for n = 1, 9 do
+turtle.forward()
+end
+ 
+turtle.select(1)
+turtle.placeDown()
+turtle.forward()
+turtle.turnLeft()
+turtle.forward()
+turtle.select(6)
+turtle.placeDown()
+turtle.turnLeft()
+turtle.forward()
+turtle.turnLeft()
+ 
+for n = 1, 3 do
+turtle.forward()
+end
+ 
+for n = 1, 14 do
+turtle.select(1)
+turtle.placeDown()
+end
+
+-----------------
