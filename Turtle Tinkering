@@ -363,3 +363,59 @@ if redstone.getInput("top", true) then -- If the redstone above is activited the
  
 end
 end
+
+
+Redstone Circuit Code
+
+turtle.up()
+turtle.select(1)
+turtle.placeDown()
+ 
+for n = 1, 3 do
+turtle.forward()
+turtle.select(2)
+turtle.placeDown()
+ 
+end
+ 
+turtle.forward()
+turtle.select(1)
+turtle.placeDown()
+turtle.turnRight()
+ 
+for n = 1, 3 do
+turtle.forward()
+turtle.select(2)
+turtle.placeDown()
+ 
+end
+ 
+turtle.forward()
+turtle.select(1)
+turtle.placeDown()
+turtle.turnRight()
+ 
+for n = 1, 3 do
+turtle.forward()
+turtle.select(2)
+turtle.placeDown()
+ 
+end
+ 
+turtle.forward()
+turtle.select(1)
+turtle.placeDown()
+turtle.turnRight()
+ 
+for n = 1, 3 do
+turtle.forward()
+turtle.select(2)
+turtle.placeDown()
+ 
+end
+ 
+turtle.forward()
+turtle.forward()
+turtle.select(3)
+turtle.placeDown()
+turtle.digDown()
