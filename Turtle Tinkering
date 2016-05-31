@@ -75,7 +75,7 @@ end
 
 -----------------
 
-station code:
+station code: - Parker
 
 for n = 1, 4 do
  
@@ -302,3 +302,64 @@ turtle.up()
 turtle.forward()
 turtle.dig()
 turtle.select(3)
+
+*detector rail code #1 - Parker
+
+rednet.open("left") -- Opens the router
+ 
+local sKey = "Station 1" -- Creates String
+local sText = "The Train has arrived at Station 1" -- ""
+ 
+ 
+while true do -- waits forever to receive a message with the sKey
+local id, msg = rednet.receive()
+os.sleep(.1)
+ 
+if msg ==  sKey then -- Clear screen and prints sText, which then starts the ext program
+term.clear()
+term.setCursorPos(1,1)
+print(sText)
+os.sleep(10)
+term.clear()
+shell.run("station2")
+ 
+end
+end
+
+*detector rail code #2 - Parker
+
+rednet.open("left") -- Opens the router
+ 
+local sKey = "Station 2" -- Creates a string
+local sText = "The train has arrived at station 2" -- ""
+ 
+while true do -- Waits forever to receive a message with the sKey
+local id, msg = rednet.receive()
+os.sleep(0.1)
+ 
+if msg == sKey then -- Clears the scren and prints the sText, which then opens station2
+term.clear()
+term.setCursorPos(1,1)
+print(sText)
+os.sleep(10)
+term.clear()
+shell.run("receive")
+ 
+end
+end
+
+*Detect Code - Parker
+
+while true do
+ 
+rednet.open("back") -- Opens the router
+os.pullEvent("redstone") -- Creates an event called 'redstone'
+ 
+ 
+ 
+if redstone.getInput("top", true) then -- If the redstone above is activited then it sends a message
+ 
+  rednet.broadcast("Station 2")
+ 
+end
+end
